@@ -5,6 +5,7 @@
 
     hr {
         margin-bottom: auto;
+        max-width: baseline * 9.4;
     }
 
     #about {
@@ -20,10 +21,10 @@
 
             .icon-about {
                 color: $color-text-primary;
-                width: $base-font-size * 4.5;
-                height: $base-font-size * 4.5;
+                width: $base-font-size * 6;
+                height: $base-font-size * 6;
                 border-radius: 100%;
-                line-height: $base-font-size * 4.5;
+                line-height: $base-font-size * 6;
                 background-color: $color-primary;
                 margin: $margin-none auto $baseline;
             }
@@ -163,6 +164,7 @@
 
         .portfolio-box:hover .portfolio-box-caption {
             opacity: 1;
+            transition: 1s;
         }
     }
 
@@ -177,6 +179,11 @@
             border-radius: 100%;
             line-height: $base-font-size * 4.5;
             border: 2px solid $color-primary;
+            transition: transform 0.5s;
+
+            &:hover {
+                transform: rotate(-45deg);
+            }
         }
 
 
@@ -188,9 +195,10 @@
             }
 
             .divider-light-dark {
-                width: $baseline * 2;
+                width: $baseline + 1px;
                 margin-left: $padding-none;
                 margin-bottom: 20px;
+                opacity: 50%;
             }
         }
     }
